@@ -12,13 +12,13 @@ Place this in the hotstar live stream directory or change the value of TOPDIR fo
 First install both the dependencies . Then Clone the repository hotstarsportslivestreamer from Github .
 Place this repository inside the folder or anywhere .
 
-`sudo apt-get install php7.0 livestreamer
-git clone https://github.com/biezom/hotstarsportslivestreamer.git
-cd hotstarsportslivestreamer-master
-git clone https://github.com/harish1996/AIASFKDownloadscript.git
-cd AIASFKDownloadscript-master
-sudo chown u+x downloadall.sh
-./downloadall.sh`
+    sudo apt-get install php7.0 livestreamer
+    git clone https://github.com/biezom/hotstarsportslivestreamer.git
+    cd hotstarsportslivestreamer-master
+    git clone https://github.com/harish1996/AIASFKDownloadscript.git
+    cd AIASFKDownloadscript-master
+    sudo chown u+x downloadall.sh
+    ./downloadall.sh
 
 The Downloaded videos will be available in the ${TOPDIR}/hotstarsportslivestreamer-master/videos folder .
 Open the Videos with VLC media Player , Download Codecs if needed .
