@@ -1,4 +1,6 @@
 # AIASFKDownloadscript
+A Script to Download all the episodes of **As I Am Suffering From Kadhal** from Hotstar in Linux .You can tweak the script for downloading Other series also just by changing the links .
+
 Place this in the hotstar live stream directory or change the value of TOPDIR for proper download 
 
 ## Dependencies : 
