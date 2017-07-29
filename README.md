@@ -1,13 +1,13 @@
 # AIASFKDownloadscript
 Place this in the hotstar live stream directory or change the value of TOPDIR for proper download 
 
-##Dependencies : 
+## Dependencies : 
 1. A Linux System ( lol ! )
 2. php 7.0
 3. Livestreamer
 4. Hotstar sports live streamer
 
-##Instructions :
+## Instructions :
 
 First install both the dependencies . Then Clone the repository hotstarsportslivestreamer from Github .
 Place this repository inside the folder or anywhere .
