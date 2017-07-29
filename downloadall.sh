@@ -1,5 +1,4 @@
 #! /bin/bash
-TOPDIR=..		# Edit the TOPDIR to the folder where hotstarlivestreamer resides
 
 EPISODE[0]=http://www.hotstar.com/tv/as-im-suffering-from-kadhal/14361/meet-the-sufferers/1000179049
 EPISODE[1]=http://www.hotstar.com/tv/as-im-suffering-from-kadhal/14361/suffering-from-chaos/1000179050
@@ -16,7 +15,7 @@ i=0 # Edit this if you have interrupted the download midway . If already downloa
 
 while [ $i -le 9 ] ; # Looping through episodes
 do
-	echo -e "${EPISODE[$i]}\n360p\nd" | ${TOPDIR}/hotstarlivestreamer.sh
+	echo -e "${EPISODE[$i]}\n360p\nd" | ./hotstarlivestreamer.sh
 	i=`expr $i + 1`
 done
 
