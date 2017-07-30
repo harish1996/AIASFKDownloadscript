@@ -3,15 +3,21 @@ QUALITY ?= 360p
 STREAM ?=n
 TOPDIR = ${PWD}
 export QUALITY
-
-ifeq(${STREAM},y)
-	DOWN_OR_STREAM := p
+ifeq ($(STREAM),y)
+	DOWN_OR_STREAM = p
 else
-	DOWN_OR_STREAM := d
+	DOWN_OR_STREAM = d
 endif
 export DOWN_OR_STREAM
 
 .PHONY: dependencies clean install all
+
+all : 
+	test -d ${TOPDIR}/hotstarsportslivestreamer || ( echo " Run make install first " ; exit 1 )
+	cd ${TOPDIR}/hotstarsportslivestreamer
+	./downloadall.sh
+	echo " Downloaded !! "
+
 
 dependencies :
 	echo -n " Installing Dependencies "
@@ -33,11 +39,6 @@ install : dependencies
 	sudo chmod u+x downloadall.sh
 	cp downloadall.sh hotstarsportslivestreamer/
 	
-all : 
-	test -d ${TOPDIR}/hotstarsportslivestreamer || ( echo " Run make install first " ; exit 1 )
-	cd ${TOPDIR}/hotstarsportslivestreamer
-	./downloadall.sh
-	echo " Downloaded !! "
 
 clean :
 	cd ${TOPDIR}
