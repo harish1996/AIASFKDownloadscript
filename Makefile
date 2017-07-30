@@ -14,8 +14,7 @@ export DOWN_OR_STREAM
 
 all : 
 	test -d ${TOPDIR}/hotstarsportslivestreamer || ( echo " Run make install first " ; exit 1 )
-	cd ${TOPDIR}/hotstarsportslivestreamer
-	./downloadall.sh
+	cd ${TOPDIR}/hotstarsportslivestreamer && ./downloadall.sh
 	echo " Downloaded !! "
 
 
@@ -32,12 +31,10 @@ dependencies :
 	which git || sudo apt-get install git
 
 install : dependencies
-	git clone https://github.com/biezom/hotstarsportslivestreamer.git
-	cd hotstarsportslivestreamer
-	sudo chmod u+x hotstarlivestreamer.sh
-	cd ..
-	sudo chmod u+x downloadall.sh
-	cp downloadall.sh hotstarsportslivestreamer/
+	test -d ${TOPDIR}/hotstarsportslivestreamer || git clone https://github.com/biezom/hotstarsportslivestreamer.git
+	sudo chmod u+x ${TOPDIR}/hotstarsportslivestreamer/hotstarlivestreamer.sh
+	sudo chmod u+x ${TOPDIR}/downloadall.sh
+	cp ${TOPDIR}/downloadall.sh ${TOPDIR}/hotstarsportslivestreamer/
 	
 
 clean :
