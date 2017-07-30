@@ -9,18 +9,22 @@ Place this in the hotstar live stream directory or change the value of TOPDIR fo
 
 ## Instructions :
 
-First install both the dependencies . Then Clone the repository hotstarsportslivestreamer from Github .
-Place this repository inside the folder or anywhere .
+Clone this repository or Download this repository and `cd` into the folder and run the following statements 
 
-    sudo apt-get install php7.0 livestreamer
-    git clone https://github.com/biezom/hotstarsportslivestreamer.git
-    cd hotstarsportslivestreamer
-    git clone https://github.com/harish1996/AIASFKDownloadscript.git
-    cd AIASFKDownloadscript
-    sudo chown u+x downloadall.sh
-    mv downloadall.sh ../
-    cd ../
-    ./downloadall.sh
+    make install
+    make 
+
+This will download the videos in the default quality 360p . 
+To change the quality of the download , Use the variable QUALITY which can values like 360p , 404p , 720p , 1080p etc.
+For example , the below command will download the videos in 720p Quality 
+
+    make QUALITY=720p     
+
+Make utility will automatically download all the dependencies and install them when make install is run. 
+
+If make is not installed , install make first 
+    
+    sudo apt-get install make
 
 The Downloaded videos will be available in the ${TOPDIR}/hotstarsportslivestreamer-master/videos folder .
 Open the Videos with VLC media Player , Download Codecs if needed .
