@@ -31,7 +31,7 @@ dependencies :
 	which git || sudo apt-get install git
 
 install : dependencies
-	test -d ${TOPDIR}/hotstarsportslivestreamer || git clone https://github.com/biezom/hotstarsportslivestreamer.git
+	test -d ${TOPDIR}/hotstarsportslivestreamer || git clone https://github.com/harish1996/hotstarsportslivestreamer.git
 	sudo chmod u+x ${TOPDIR}/hotstarsportslivestreamer/hotstarlivestreamer.sh
 	sudo chmod u+x ${TOPDIR}/downloadall.sh
 	cp ${TOPDIR}/downloadall.sh ${TOPDIR}/hotstarsportslivestreamer/
